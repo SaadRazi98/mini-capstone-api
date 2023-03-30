@@ -23,4 +23,15 @@ class ProductController < ApplicationController
     @product.save
     render :show
   end 
+
+  def update 
+    @product = Product.find_by(
+      name = params[:name]
+      price = params[:price]
+      image_url = params[:image_url]
+      description = params[:description]
+    )
+    @product.save
+    render :show
+  end 
 end 
