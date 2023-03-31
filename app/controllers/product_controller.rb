@@ -6,7 +6,9 @@ class ProductController < ApplicationController
   end 
 
   def show
-    @product = Product.find_by(id: params[:id])
+    @product = Product.find_by(
+      id: params[:id]
+    )
     render :show
   end 
 
@@ -40,9 +42,12 @@ class ProductController < ApplicationController
   end 
 
   def destroy
-    @product = Product.find_by(id: params [:id])
+    @product = Product.find_by(
+      id: params [:id]
+    )
     @product.destroy
     render json:{message: "Product has been successfully removed"}
   end 
+
 
 end 

@@ -1,6 +1,7 @@
 require "test_helper"
 
 class ProductControllerTest < ActionDispatch::IntegrationTest
+  
   test "index" do
     get "/products.json"
     assert_response 200
