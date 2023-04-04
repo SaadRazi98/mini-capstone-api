@@ -24,7 +24,10 @@ class ProductController < ApplicationController
     )
 
     @product = Product.new(
-      name: "Kang the Conqueror Action Figure", price: 25, image_url: "https://cdn.shopify.com/s/files/1/0169/6995/7440/products/F6575_PROD_MVL_AMN_LEGENDS_FROST_3_69161_Black_Online_2000SQ_1500x.jpg?v=1675438086", description: "Kang is the main villain for the MCU. This action figure he has his famous green and purple suit with his blue helmet shield."
+      name: "Kang the Conqueror Action Figure", 
+      price: 25, 
+      image_url: "https://cdn.shopify.com/s/files/1/0169/6995/7440/products/F6575_PROD_MVL_AMN_LEGENDS_FROST_3_69161_Black_Online_2000SQ_1500x.jpg?v=1675438086", 
+      description: "Kang is the main villain for the MCU. This action figure he has his famous green and purple suit with his blue helmet shield."
     )
     @product.save
     render :show
@@ -43,7 +46,7 @@ class ProductController < ApplicationController
 
   def destroy
     @product = Product.find_by(
-      id: params [:id]
+      id: params[:id]
     )
     @product.destroy
     render json:{message: "Product has been successfully removed"}
